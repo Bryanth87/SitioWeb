@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Nuestras fotos: Perdóname</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 1100px;
+            background-color: #ffd6ec;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #FFFFFF;
+            width: 80%;
+            height: 950px;
+            padding: 2em;
+            border: 1px solid;
+            border-radius: 20px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .slide,
+        .mensaje-final {
+            display: none;
+        }
+
+        .slide.active,
+        .mensaje-final.active {
+            display: block;
+        }
+
+        .slide img,
+        .mensaje-final img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto;
+        }
+
+        .slide p,
+        .mensaje-final p {
+            font-size: 25px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 34px;
+        }
+
+        label {
+            background-color: #FF8585;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            margin: 25px 0;
+            border-radius: 20px;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 34px;
+        }
+
+        @media (max-width: 600px) {
+            label {
+                width: 90%;
+                padding: 15px;
+                font-size: 34px;
+            }
+        }
+
+        .slides {
+            display: none;
+        }
+
+        #slide1:checked~.container #foto1,
+        #slide2:checked~.container #foto2,
+        #slide3:checked~.container #foto3,
+        #slide4:checked~.container #foto4,
+        #slide5:checked~.container #foto5,
+        #slide6:checked~.container #foto6,
+        #slide7:checked~.container #mensaje {
+            display: block;
+        }
+
+        #mensaje {
+            display: none;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio autoplay loop>
+        <source src="CancionEladio.mp3" type="audio/mpeg">
+    </audio>
+    
+    <input type="radio" name="slides" id="slide1" checked>
+    <input type="radio" name="slides" id="slide2">
+    <input type="radio" name="slides" id="slide3">
+    <input type="radio" name="slides" id="slide4">
+    <input type="radio" name="slides" id="slide5">
+    <input type="radio" name="slides" id="slide6">
+
+    <div class="container">
+        <div id="foto1" class="slides">
+            <img src="Tu y yo.jpg" alt="Our 1">
+            <p>Hola ❤️</p>
+            <label for="slide2">Siguiente ➡️</label>
+        </div>
+        <div id="foto2" class="slides">
+            <img src="Ojasos.jpg" alt="Our 2">
+            <p>Vengo a decirte que me siento triste por la decisión que tomaste.</p>
+            <label for="slide3">Siguiente ➡️</label>
+        </div>
+        <div id="foto3" class="slides">
+            <img src="Me.jpg" alt="Our 3">
+            <p>Actué de mala manera y cometo muchos errores pero...</p>
+            <label for="slide4">Siguiente ➡️</label>
+        </div>
+        <div id="foto4" class="slides">
+            <img src="Kiss.jpg" alt="Our 4">
+            <p>Prometo que mejoraré y actuaré mejor contigo, porque te lo mereces, mi niña</p>
+            <label for="slide5">Siguiente ➡️</label>
+        </div>
+        <div id="foto5" class="slides">
+            <img src="You.jpg" alt="Our 5">
+            <p>Cómo no quererte, si sos muy hermosa, una niña con valores, una niña que se quiere superar</p>
+            <label for="slide6">Siguiente ➡️</label>
+        </div>
+        <div id="foto6" class="slides">
+            <img src="Movie.jpg" alt="Our 6">
+            <p>Disculpame preciosa, te amo mucho </p>
+        </div>
+        <div id="mensaje" class="slides">
+            ¡Perdóname, por favor! Hoy le daré un chocolate a alguién.
+        </div>
+    </div>
+
+</body>
+
+</html>
